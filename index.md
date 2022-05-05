@@ -74,7 +74,7 @@ If you encounter an issue with this while running it in PowerShell, try cmd inst
 
 `docker build -t gcr.io/GOOGLE_PROJECT_ID/gameserver:latest . `
 
-Don't forget the dot at the end. It's important! When doing a rebuild, add `--no-cache` to the arguments list. After a successful build, you can test running the server locally:
+If you get a warning like `"docker build" requires exactly 1 argument` make sure that you added the dot at the end of your command. It's important! When doing a rebuild, add `--no-cache` to the arguments list. After a successful build, you can test running the server locally:
 
 `docker run -p 7777:7777/udp gcr.io/GOOGLE_PROJECT_ID/gameserver:latest`
 
@@ -168,6 +168,10 @@ Paste the contents below, make changes were apppropriate:
             - name: gameserver  
               image: gcr.io/GOOGLE_PROJECT_ID/gameserver:latest
 ```
+
+Press `CTRL+O` than Enter to save, `CTRL-X` to exit.
+
+To be continued...
               
               
 
